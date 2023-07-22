@@ -1,0 +1,905 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/danieleporello/ontologies/2022/1/untitled-ontology-8"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/danieleporello/ontologies/2022/1/untitled-ontology-8">
+    <Prefix name="" IRI="http://www.semanticweb.org/danieleporello/ontologies/2022/1/untitled-ontology-8#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="swrla" IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontolgy illustates by means of a toy example the use of SWRL to model prototypes theories, in particular, the version of prototypes by James Hampton, 
+
+cf. J. A. Hampton, Testing the prototype theory of
+concepts, Journal of Memory and Language 34
+(1995) 686–7
+
+To provide a minimal modelling of the features occurring in prototype descriptions, the ontology imports an excerpt of the foundational ontology DOLCE
+
+cf. http://www.loa.istc.cnr.it/index.php/dolce/
+
+
+Weighted features are modelled by meanas of data properties and computations of similarity are implemented by means of SWRL constraints.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Abstract"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AbstractRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AgentivPhysicalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ColorQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ColorRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Elephant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Endurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HasPartTrunk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonAgentivePhysicalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonPhysicalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Perdurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Quality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Region"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SizeQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SizeRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trunk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeightQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeightRegion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasColorQuale"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPartTrunk"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSizeQuale"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ql"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#qt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasElephantValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGreyDegree"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGreyValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGreyWeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLargeDegree"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLargeValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLargeWeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTrunkDegree"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTrunkValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTrunkWeight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dumbo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#grey"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#heavy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#large"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#trunk"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#HasPartTrunk"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPartTrunk"/>
+            <Class IRI="#Trunk"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AbstractRegion"/>
+        <Class IRI="#Region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AgentivPhysicalObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Animal"/>
+        <Class IRI="#AgentivPhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColorQuality"/>
+        <Class IRI="#PhysicalQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColorRegion"/>
+        <Class IRI="#PhysicalRegion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Elephant"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HasPartTrunk"/>
+        <Class IRI="#AgentivPhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HasPartTrunk"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPartTrunk"/>
+            <Class IRI="#Trunk"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonAgentivePhysicalObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonPhysicalObject"/>
+        <Class IRI="#Endurant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalObject"/>
+        <Class IRI="#Endurant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalQuality"/>
+        <Class IRI="#Quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalRegion"/>
+        <Class IRI="#Region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Region"/>
+        <Class IRI="#Abstract"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeQuality"/>
+        <Class IRI="#PhysicalQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeRegion"/>
+        <Class IRI="#PhysicalRegion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporalRegion"/>
+        <Class IRI="#Region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trunk"/>
+        <Class IRI="#NonAgentivePhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightQuality"/>
+        <Class IRI="#PhysicalQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightRegion"/>
+        <Class IRI="#PhysicalRegion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPartTrunk"/>
+            <Class IRI="#Trunk"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Endurant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPartTrunk"/>
+            <Class IRI="#Trunk"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#HasPartTrunk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPartTrunk"/>
+            <Class IRI="#Trunk"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Abstract"/>
+        <NamedIndividual IRI="#grey"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ColorRegion"/>
+        <NamedIndividual IRI="#grey"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhysicalRegion"/>
+        <NamedIndividual IRI="#grey"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Region"/>
+        <NamedIndividual IRI="#grey"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Abstract"/>
+        <NamedIndividual IRI="#heavy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhysicalRegion"/>
+        <NamedIndividual IRI="#heavy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Region"/>
+        <NamedIndividual IRI="#heavy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightRegion"/>
+        <NamedIndividual IRI="#heavy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Abstract"/>
+        <NamedIndividual IRI="#large"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhysicalRegion"/>
+        <NamedIndividual IRI="#large"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Region"/>
+        <NamedIndividual IRI="#large"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SizeRegion"/>
+        <NamedIndividual IRI="#large"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Endurant"/>
+        <NamedIndividual IRI="#trunk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonAgentivePhysicalObject"/>
+        <NamedIndividual IRI="#trunk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhysicalObject"/>
+        <NamedIndividual IRI="#trunk"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGreyDegree"/>
+        <NamedIndividual IRI="#dumbo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGreyWeight"/>
+        <NamedIndividual IRI="#dumbo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLargeDegree"/>
+        <NamedIndividual IRI="#dumbo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLargeWeight"/>
+        <NamedIndividual IRI="#dumbo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTrunkDegree"/>
+        <NamedIndividual IRI="#dumbo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTrunkWeight"/>
+        <NamedIndividual IRI="#dumbo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.9</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPartTrunk"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty IRI="#partOf"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasColorQuale"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSizeQuale"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#qt"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasColorQuale"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPart"/>
+        <Class IRI="#Endurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPartTrunk"/>
+        <Class IRI="#Endurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPartTrunk"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSizeQuale"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#partOf"/>
+        <Class IRI="#Endurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ql"/>
+        <Class IRI="#Endurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#qt"/>
+        <Class IRI="#Quality"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasColorQuale"/>
+        <Class IRI="#ColorRegion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPart"/>
+        <Class IRI="#Endurant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPartTrunk"/>
+        <Class IRI="#Endurant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPartTrunk"/>
+        <Class IRI="#NonAgentivePhysicalObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPartTrunk"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPartTrunk"/>
+        <Class IRI="#Trunk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSizeQuale"/>
+        <Class IRI="#SizeRegion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#partOf"/>
+        <Class IRI="#Endurant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ql"/>
+        <Class IRI="#Quality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#qt"/>
+        <Class IRI="#Abstract"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasElephantValue"/>
+        <Class IRI="#PhysicalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGreyDegree"/>
+        <Class IRI="#PhysicalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGreyValue"/>
+        <Class IRI="#PhysicalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGreyWeight"/>
+        <Class IRI="#PhysicalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLargeDegree"/>
+        <Class IRI="#PhysicalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLargeValue"/>
+        <Class IRI="#PhysicalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLargeWeight"/>
+        <Class IRI="#PhysicalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTrunkDegree"/>
+        <Class IRI="#PhysicalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTrunkValue"/>
+        <Class IRI="#PhysicalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTrunkWeight"/>
+        <Class IRI="#PhysicalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTrunkDegree"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>ElephantThreshold</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasElephantValue"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#t"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThanOrEqual">
+                <Variable IRI="#t"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Elephant"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>GreyValue</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasGreyDegree"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#d"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasGreyWeight"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#w"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:multiply">
+                <Variable IRI="#v"/>
+                <Variable IRI="#d"/>
+                <Variable IRI="#w"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasGreyValue"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#v"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>ColorQualityAscriptions</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasGreyDegree"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#d"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThanOrEqual">
+                <Variable IRI="#d"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasColorQuale"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#grey"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>ElephantSumOfValue</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasGreyValue"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#v1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasTrunkValue"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#v2"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasLargeValue"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#v3"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:add">
+                <Variable IRI="#v"/>
+                <Variable IRI="#v1"/>
+                <Variable IRI="#v2"/>
+                <Variable IRI="#v3"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasElephantValue"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#v"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>LargeValue</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasLargeDegree"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#d"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasLargeWeight"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#w"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:multiply">
+                <Variable IRI="#v"/>
+                <Variable IRI="#d"/>
+                <Variable IRI="#w"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasLargeValue"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#v"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>SizeQualityAscriptions</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasLargeDegree"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#d"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThanOrEqual">
+                <Variable IRI="#d"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasSizeQuale"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#large"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>TrunkValue</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasTrunkDegree"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#d"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasTrunkWeight"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#w"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:multiply">
+                <Variable IRI="#v"/>
+                <Variable IRI="#d"/>
+                <Variable IRI="#w"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasTrunkValue"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#v"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>hasTrunkAsPartOf</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasTrunkDegree"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#d"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThanOrEqual">
+                <Variable IRI="#d"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPart"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#trunk"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Animal</IRI>
+        <Literal>Added to DOLCE taxonomy to model this example.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ColorQuality</IRI>
+        <Literal>Added to DOLCE taxonomy to model this example.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ColorRegion</IRI>
+        <Literal>Added to DOLCE taxonomy to model this example.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Elephant</IRI>
+        <Literal>Added to DOLCE taxonomy to model this example.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HasPartTrunk</IRI>
+        <Literal>Added to DOLCE taxonomy to model this example.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SizeQuality</IRI>
+        <Literal>Added to DOLCE taxonomy to model this example.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SizeRegion</IRI>
+        <Literal>Added to DOLCE taxonomy to model this example.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Trunk</IRI>
+        <Literal>Added to DOLCE taxonomy to model this example.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WeightQuality</IRI>
+        <Literal>Added to DOLCE taxonomy to model this example.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WeightRegion</IRI>
+        <Literal>Added to DOLCE taxonomy to model this example.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasColorQuale</IRI>
+        <Literal>It associates to Physical objects their quale of type Color.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasElephantValue</IRI>
+        <Literal>It serves to compute the typicality of an entity wrt. the class &quot;Elephant&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGreyDegree</IRI>
+        <Literal>It states the degree of &quot;greyness&quot; of an entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGreyValue</IRI>
+        <Literal>It is the product of the degree of &quot;Greyness&quot; with the weight of &quot;Gray&quot; for classifying Elephants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGreyWeight</IRI>
+        <Literal>It assess the weight of the attribute &quot;Grey&quot; for classifying elephants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLargeDegree</IRI>
+        <Literal>It states the degree of &quot;largeness&quot; of an entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLargeValue</IRI>
+        <Literal>It is the product of the degree of &quot;Largeness&quot; with the weight of &quot;Large&quot; for classifying Elephants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLargeWeight</IRI>
+        <Literal>It assess the weight of the attribute &quot;Large&quot; for classifying elephants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSizeQuale</IRI>
+        <Literal>It associates to Physical objects their quale of type Size.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasTrunkDegree</IRI>
+        <Literal>It states the degree to which an entity &quot;has a Trunk&quot;, it takes values in {0,1}.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasTrunkValue</IRI>
+        <Literal>It is the product of the degree of &quot;has Trunk&quot; with the weight of &quot;has Trunk&quot; for classifying Elephants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasTrunkWeight</IRI>
+        <Literal>It assess the weight of the attribute &quot;Weight&quot; for classifying elephants.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
